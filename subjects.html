@@ -14,6 +14,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 </head>
 <body>
 
@@ -35,24 +36,24 @@
 
 <section class="page-hero no-border">
   <div class="wrap">
-    <div class="breadcrumb"><a href="index.html">Home</a> / Subjects &amp; rates</div>
-    <div class="eyebrow"><span class="mark small"><svg viewBox="0 0 24 24" fill="none"><path d="M2 4L11 12L2 20" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 4L20 12L11 20" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>What we cover</div>
-    <h1>Subjects, grade levels, and rates.</h1>
-    <p class="sub">One team, four subjects — from foundational reading and math through AP coursework and SAT/ACT prep.</p>
+    <div class="breadcrumb" data-aos="fade-up"><a href="index.html">Home</a> / Subjects &amp; rates</div>
+    <div class="eyebrow" data-aos="fade-up"><span class="mark small"><svg viewBox="0 0 24 24" fill="none"><path d="M2 4L11 12L2 20" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 4L20 12L11 20" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>What we cover</div>
+    <h1 data-aos="fade-up" data-aos-delay="80">Subjects, grade levels, and rates.</h1>
+    <p class="sub" data-aos="fade-up" data-aos-delay="160">One team, four subjects — from foundational reading and math through AP coursework and SAT/ACT prep.</p>
   </div>
 </section>
 
 <section class="no-border">
   <div class="wrap">
     <div class="rate-table">
-      <div class="rate-cell">
+      <div class="rate-cell" data-aos="fade-up">
         <span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M2 4L11 12L2 20" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 4L20 12L11 20" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         <h4>Reading</h4>
         <div class="grades">Grades K–9</div>
         <div class="desc">Comprehension, vocabulary, and reading stamina built at the student's own pace.</div>
         <div class="price">$20/hr</div>
       </div>
-      <div class="rate-cell">
+      <div class="rate-cell" data-aos="fade-up" data-aos-delay="90">
         <span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M2 4L11 12L2 20" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 4L20 12L11 20" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         <h4>Math</h4>
         <div class="grades">Grades K–9, incl. level-skip prep</div>
@@ -60,14 +61,14 @@
         <div class="price">$20/hr</div>
         <a class="cell-link" href="accelerating-math.html">How level-skipping works →</a>
       </div>
-      <div class="rate-cell">
+      <div class="rate-cell" data-aos="fade-up" data-aos-delay="180">
         <span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M2 4L11 12L2 20" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 4L20 12L11 20" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         <h4>AP Classes</h4>
         <div class="grades">Grades 6–9 · Physics, Biology, and other AP coursework</div>
         <div class="desc">Support for AP-level material, from problem sets to exam-style practice.</div>
         <div class="price">$30/hr</div>
       </div>
-      <div class="rate-cell">
+      <div class="rate-cell" data-aos="fade-up" data-aos-delay="270">
         <span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M2 4L11 12L2 20" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 4L20 12L11 20" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         <h4>SAT / ACT Prep</h4>
         <div class="grades">Grades 8–9</div>
@@ -100,5 +101,17 @@
   </div>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 650,
+    easing: 'ease-out',
+    once: true,
+    offset: 60,
+    disable: function () {
+      return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    }
+  });
+</script>
 </body>
 </html>
