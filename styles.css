@@ -73,15 +73,15 @@ nav.wrap{
 .btn-primary{
   background:var(--navy);color:#fff;padding:15px 26px;border-radius:3px;
   font-weight:600;font-size:0.95rem;display:inline-flex;align-items:center;gap:8px;
-  transition:background 0.15s ease;
+  transition:background 0.15s ease, transform 0.15s ease;
 }
-.btn-primary:hover{background:var(--navy-deep);}
+.btn-primary:hover{background:var(--navy-deep);transform:translateY(-2px);}
 .btn-secondary{
   border:1px solid var(--line);color:var(--navy);padding:15px 26px;border-radius:3px;
   font-weight:600;font-size:0.95rem;background:#fff;
-  transition:border-color 0.15s ease;
+  transition:border-color 0.15s ease, transform 0.15s ease;
 }
-.btn-secondary:hover{border-color:var(--sky);}
+.btn-secondary:hover{border-color:var(--sky);transform:translateY(-2px);}
 
 /* ---------- Page hero (subpages) ---------- */
 .page-hero{
@@ -108,8 +108,9 @@ section.no-border{border-bottom:none;}
 .tutor-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;}
 .tutor-card{
   background:#fff;border:1px solid var(--line);border-radius:6px;
-  padding:36px;
+  padding:36px;transition:transform 0.15s ease, box-shadow 0.15s ease;
 }
+.tutor-card:hover{transform:translateY(-3px);box-shadow:0 14px 28px -14px rgba(15,42,74,0.16);}
 .tutor-card h3{font-size:1.5rem;font-weight:600;margin-bottom:6px;}
 .tutor-subjects{
   font-size:0.85rem;color:var(--sky);font-weight:600;letter-spacing:0.02em;
@@ -198,9 +199,9 @@ section.no-border{border-bottom:none;}
 .link-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
 .link-card{
   background:#fff;border:1px solid var(--line);border-radius:6px;padding:30px;
-  transition:border-color 0.15s ease;
+  transition:border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
 }
-.link-card:hover{border-color:var(--sky);}
+.link-card:hover{border-color:var(--sky);transform:translateY(-3px);box-shadow:0 12px 24px -12px rgba(15,42,74,0.18);}
 .link-card .mark{margin-bottom:18px;}
 .link-card h3{font-size:1.15rem;font-weight:600;margin-bottom:10px;}
 .link-card p{font-size:0.9rem;color:var(--ink-soft);line-height:1.55;margin:0 0 16px;}
