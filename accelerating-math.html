@@ -14,6 +14,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -44,10 +45,10 @@
 
 <section class="page-hero no-border">
   <div class="wrap">
-    <div class="breadcrumb"><a href="index.html">Home</a> / Accelerating Math</div>
-    <div class="eyebrow"><span class="mark small"><svg viewBox="0 0 24 24" fill="none"><path d="M2 4L11 12L2 20" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 4L20 12L11 20" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Free checklist</div>
-    <h1>Credit-by-exam: is your child eligible?</h1>
-    <p class="sub">What to check before assuming your child can, or can't, skip a class.</p>
+    <div class="breadcrumb" data-aos="fade-up"><a href="index.html">Home</a> / Accelerating Math</div>
+    <div class="eyebrow" data-aos="fade-up"><span class="mark small"><svg viewBox="0 0 24 24" fill="none"><path d="M2 4L11 12L2 20" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 4L20 12L11 20" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Free checklist</div>
+    <h1 data-aos="fade-up" data-aos-delay="80">Credit-by-exam: is your child eligible?</h1>
+    <p class="sub" data-aos="fade-up" data-aos-delay="160">What to check before assuming your child can, or can't, skip a class.</p>
   </div>
 </section>
 
@@ -59,7 +60,7 @@
 
 <section class="no-border">
   <div class="wrap split">
-    <div>
+    <div data-aos="fade-right">
       <h2 style="font-size:1.7rem;margin-bottom:24px;">Questions to ask your school counselor</h2>
       <ul class="check-list">
         <li><span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M2 4L11 12L2 20" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 4L20 12L11 20" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Does our district offer credit-by-exam, and for which subjects?</li>
@@ -71,7 +72,7 @@
         <li><span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M2 4L11 12L2 20" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 4L20 12L11 20" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Does earning credit this way affect eligibility for the next course level up?</li>
       </ul>
     </div>
-    <div>
+    <div data-aos="fade-left">
       <h2 style="font-size:1.7rem;margin-bottom:24px;">Signs your child might be a good candidate</h2>
       <ul class="check-list">
         <li><span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M2 4L11 12L2 20" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 4L20 12L11 20" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>They're consistently finishing current coursework early and correctly, not just quickly.</li>
@@ -109,5 +110,17 @@
   </div>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 650,
+    easing: 'ease-out',
+    once: true,
+    offset: 60,
+    disable: function () {
+      return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    }
+  });
+</script>
 </body>
 </html>
