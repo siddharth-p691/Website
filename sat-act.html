@@ -14,6 +14,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -44,10 +45,10 @@
 
 <section class="page-hero no-border">
   <div class="wrap">
-    <div class="breadcrumb"><a href="index.html">Home</a> / SAT/ACT Prep</div>
-    <div class="eyebrow"><span class="mark small"><svg viewBox="0 0 24 24" fill="none"><path d="M2 4L11 12L2 20" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 4L20 12L11 20" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Free roadmap</div>
-    <h1>A roadmap for starting test prep in 9th grade.</h1>
-    <p class="sub">Spread across four years, not crammed into one.</p>
+    <div class="breadcrumb" data-aos="fade-up"><a href="index.html">Home</a> / SAT/ACT Prep</div>
+    <div class="eyebrow" data-aos="fade-up"><span class="mark small"><svg viewBox="0 0 24 24" fill="none"><path d="M2 4L11 12L2 20" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 4L20 12L11 20" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Free roadmap</div>
+    <h1 data-aos="fade-up" data-aos-delay="80">A roadmap for starting test prep in 9th grade.</h1>
+    <p class="sub" data-aos="fade-up" data-aos-delay="160">Spread across four years, not crammed into one.</p>
   </div>
 </section>
 
@@ -63,28 +64,28 @@
       <h2>The four-year outline</h2>
     </div>
     <div class="roadmap">
-      <div class="roadmap-item">
+      <div class="roadmap-item" data-aos="fade-right">
         <div class="roadmap-label">9th grade</div>
         <h4>Foundation, not tests yet</h4>
         <p>Build strong study habits and close any gaps in core math and reading skills. A baseline practice test is useful here just to see a starting point, not to prepare intensely.</p>
       </div>
-      <div class="roadmap-item">
+      <div class="roadmap-item" data-aos="fade-right" data-aos-delay="80">
         <div class="roadmap-label">10th grade</div>
         <h4>The PSAT as a dry run</h4>
         <p>Take the PSAT for practice and early exposure to the format. Start light, consistent test-skill practice alongside regular coursework — no cramming yet.</p>
       </div>
-      <div class="roadmap-item">
+      <div class="roadmap-item" data-aos="fade-right" data-aos-delay="160">
         <div class="roadmap-label">11th grade</div>
         <h4>The year that counts most</h4>
         <p>This is typically when the PSAT counts toward National Merit consideration, and when most students take the SAT or ACT for the first time, often more than once. AP exams for junior-year courses land here too. This is the year the earlier groundwork pays off.</p>
       </div>
-      <div class="roadmap-item">
+      <div class="roadmap-item" data-aos="fade-right" data-aos-delay="240">
         <div class="roadmap-label">12th grade</div>
         <h4>Polish and apply</h4>
         <p>Any final retakes, application-specific requirements, and using senior year for applications rather than starting test prep from zero.</p>
       </div>
     </div>
-    <div class="callout" style="margin-top:44px;max-width:680px;">
+    <div class="callout" style="margin-top:44px;max-width:680px;" data-aos="fade-up">
       <span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M2 4L11 12L2 20" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 4L20 12L11 20" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
       <p>The goal isn't to do more work overall — it's to make sure no single year has to carry all of it.</p>
     </div>
@@ -113,5 +114,17 @@
   </div>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 650,
+    easing: 'ease-out',
+    once: true,
+    offset: 60,
+    disable: function () {
+      return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    }
+  });
+</script>
 </body>
 </html>
