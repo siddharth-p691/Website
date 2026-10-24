@@ -59,6 +59,14 @@ nav.wrap{
   font-size:0.88rem;font-weight:600;white-space:nowrap;
 }
 .nav-cta:hover{background:var(--navy-deep);}
+.nav-highlight{
+  display:inline-flex;align-items:center;gap:6px;
+  background:var(--gold-soft);color:var(--gold-deep);border:1px solid rgba(201,162,75,0.5);
+  padding:8px 16px;border-radius:999px;font-size:0.82rem;font-weight:700;white-space:nowrap;
+  margin-right:18px;
+}
+.nav-highlight:hover{background:var(--gold-soft);border-color:var(--gold-deep);}
+.nav-highlight svg{width:13px;height:13px;}
 
 /* ---------- Hero (home) ---------- */
 .hero{padding:96px 0 88px;border-bottom:1px solid var(--line);}
@@ -350,6 +358,42 @@ section.no-border{border-bottom:none;}
 .accomplishment-card p{margin:0;font-size:1.02rem;line-height:1.55;color:var(--ink);}
 .accomplishment-card p strong{color:var(--navy);font-family:'Fraunces',serif;font-weight:600;}
 
+/* ---------- CBE promo panel (Credit-by-Exam digital product) ---------- */
+.cbe-panel{
+  background:linear-gradient(155deg, var(--navy) 0%, var(--navy-deep) 100%);
+  border-radius:14px;padding:64px 56px;position:relative;overflow:hidden;
+}
+.cbe-panel::before{
+  content:"";position:absolute;top:-80px;right:-80px;width:280px;height:280px;border-radius:50%;
+  background:radial-gradient(circle, rgba(201,162,75,0.18), transparent 70%);pointer-events:none;
+}
+.cbe-tag{
+  display:inline-flex;align-items:center;gap:8px;background:rgba(201,162,75,0.16);
+  border:1px solid rgba(201,162,75,0.4);color:var(--gold);font-size:0.72rem;font-weight:700;
+  letter-spacing:0.08em;text-transform:uppercase;padding:6px 14px;border-radius:999px;margin-bottom:24px;
+  position:relative;z-index:1;
+}
+.cbe-panel h2{color:#fff;font-size:2.1rem;max-width:620px;position:relative;z-index:1;}
+.cbe-panel p.dek{color:#C7D6E5;font-size:1.02rem;line-height:1.65;max-width:560px;margin-top:16px;position:relative;z-index:1;}
+.cbe-grade-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px;position:relative;z-index:1;}
+.cbe-grade-card{
+  background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.14);border-radius:10px;
+  padding:26px;transition:border-color 0.15s ease, transform 0.15s ease, background 0.15s ease;
+}
+.cbe-grade-card:hover{border-color:var(--gold);background:rgba(255,255,255,0.1);transform:translateY(-2px);}
+.cbe-grade-card .grade-num{font-family:'Fraunces',serif;color:#fff;font-size:1.3rem;font-weight:600;margin-bottom:6px;}
+.cbe-grade-card p{color:#9DB6CC;font-size:0.9rem;line-height:1.55;margin:0 0 20px;}
+.cbe-grade-card a{
+  display:inline-flex;align-items:center;gap:6px;color:var(--gold);font-weight:700;font-size:0.86rem;
+}
+.cbe-grade-card a:hover{color:#fff;}
+.cbe-foot{
+  margin-top:36px;display:flex;flex-wrap:wrap;gap:16px 28px;align-items:baseline;position:relative;z-index:1;
+}
+.cbe-foot a.cbe-alt{color:#C7D6E5;font-weight:600;font-size:0.88rem;text-decoration:underline;text-decoration-color:rgba(199,214,236,0.4);}
+.cbe-foot a.cbe-alt:hover{color:#fff;}
+.cbe-fineprint{color:#6E89A3;font-size:0.76rem;line-height:1.6;max-width:640px;margin-top:28px;position:relative;z-index:1;}
+
 /* ---------- FAQ accordion ---------- */
 .faq-list{max-width:760px;}
 .faq-item{border-bottom:1px solid var(--line);}
@@ -418,6 +462,10 @@ footer .foot-links{display:flex;gap:20px;}
   .pull-quote blockquote{font-size:1.7rem;}
   .pull-quote-section{padding:72px 0;}
   .pull-quote .mark-big{width:64px;height:40px;margin-bottom:28px;}
+  .cbe-panel{padding:44px 26px;}
+  .cbe-panel h2{font-size:1.6rem;}
+  .cbe-grade-grid{grid-template-columns:1fr;}
+  .nav-highlight{display:none;}
 }
 
 :focus-visible{outline:2px solid var(--sky);outline-offset:2px;}
